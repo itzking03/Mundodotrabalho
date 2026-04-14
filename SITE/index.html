@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mundo do Trabalho</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen">
+
+  <!-- Header -->
+  <header class="p-6 text-center border-b border-gray-700">
+    <h1 class="text-4xl font-bold tracking-wide">🌎 Mundo do Trabalho</h1>
+    <p class="text-gray-400 mt-2">Explore profissões, salários e áreas</p>
+  </header>
+
+  <!-- Sobre -->
+  <section class="max-w-5xl mx-auto p-6">
+    <div class="bg-gray-800 border border-gray-700 rounded-2xl p-6 shadow-lg">
+      <h2 class="text-2xl font-bold mb-3">O que é o mundo do trabalho?</h2>
+      <p class="text-gray-300 leading-relaxed mb-4">
+        O mundo do trabalho é o conjunto de atividades profissionais, empregos e formas de ganhar a vida na sociedade.
+        Ele envolve diferentes áreas, profissões e habilidades que as pessoas desenvolvem para trabalhar e construir
+        suas carreiras.
+      </p>
+
+      <h3 class="text-xl font-semibold mb-2">Por que ele é importante?</h3>
+      <p class="text-gray-300 leading-relaxed">
+        Entender o mundo do trabalho ajuda você a escolher uma profissão, se preparar melhor para o futuro e desenvolver
+        habilidades importantes. Além disso, permite conhecer oportunidades, salários e áreas que mais combinam com
+        seus interesses.
+      </p>
+    </div>
+        
+      <!-- Temas importantes -->
+      <div class="mt-6 grid md:grid-cols-2 gap-4">
+
+        <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+          <h3 class="font-semibold text-lg">Transformação Digital e Futuro do Trabalho</h3>
+          <p class="text-gray-400 text-sm">A tecnologia está mudando como trabalhamos, criando novas profissões e transformando outras.</p>
+        </div>
+
+        <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+          <h3 class="font-semibold text-lg">Inteligência Artificial (IA) e Automação</h3>
+          <p class="text-gray-400 text-sm">Máquinas e sistemas inteligentes estão automatizando tarefas e exigindo novas habilidades.</p>
+        </div>
+
+        <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+          <h3 class="font-semibold text-lg">Novos Modelos de Trabalho</h3>
+          <p class="text-gray-400 text-sm">Home office, trabalho híbrido e freelancing estão cada vez mais comuns.</p>
+        </div>
+
+        <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+          <h3 class="font-semibold text-lg">Habilidades Essenciais (Soft e Hard Skills)</h3>
+          <p class="text-gray-400 text-sm">O mercado valoriza tanto habilidades técnicas quanto comportamentais.</p>
+        </div>
+
+        <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+          <h3 class="font-semibold text-lg">Soft Skills</h3>
+          <p class="text-gray-400 text-sm">Comunicação, trabalho em equipe, criatividade e inteligência emocional.</p>
+        </div>
+
+        <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+          <h3 class="font-semibold text-lg">Hard Skills</h3>
+          <p class="text-gray-400 text-sm">Conhecimentos técnicos como programação, idiomas e uso de ferramentas.</p>
+        </div>
+
+        <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+          <h3 class="font-semibold text-lg">Respeito e Diversidade</h3>
+          <p class="text-gray-400 text-sm">Ambientes diversos são mais inovadores e promovem inclusão e respeito.</p>
+        </div>
+
+        <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+          <h3 class="font-semibold text-lg">Dinâmica do Mercado de Trabalho</h3>
+          <p class="text-gray-400 text-sm">O mercado muda constantemente, exigindo adaptação e aprendizado contínuo.</p>
+        </div>
+
+        <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+          <h3 class="font-semibold text-lg">Networking</h3>
+          <p class="text-gray-400 text-sm">Criar conexões profissionais pode abrir portas e oportunidades.</p>
+        </div>
+
+        <div class="bg-gray-900 p-4 rounded-xl border border-gray-700">
+          <h3 class="font-semibold text-lg">Gestão de Carreira e Bem-Estar</h3>
+          <p class="text-gray-400 text-sm">Planejar a carreira e cuidar da saúde mental são essenciais para o sucesso profissional.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Controls -->
+  <section class="p-6 flex flex-col md:flex-row gap-4 max-w-5xl mx-auto">
+    <input id="search" type="text" placeholder="Buscar profissão..." 
+      class="flex-1 p-3 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+    <select id="areaFilter" 
+      class="p-3 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      <option value="">Todas as áreas</option>
+      <option value="Tecnologia">Tecnologia</option>
+      <option value="Saúde">Saúde</option>
+      <option value="Negócios">Negócios</option>
+      <option value="Educação">Educação</option>
+      <option value="Criativo">Criativo</option>
+    </select>
+  </section>
+
+  <!-- Cards -->
+  <section id="cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 max-w-6xl mx-auto"></section>
+
+  <!-- Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-70 hidden items-center justify-center">
+    <div class="bg-gray-900 p-6 rounded-2xl w-11/12 md:w-1/3 shadow-2xl animate-scale">
+      <h2 id="modalTitle" class="text-2xl font-bold mb-4"></h2>
+      <p id="modalDesc" class="text-gray-300 mb-2"></p>
+      <p id="modalSalary" class="text-green-400 font-semibold"></p>
+      <button onclick="closeModal()" class="mt-4 w-full bg-blue-600 hover:bg-blue-700 py-2 rounded-xl">Fechar</button>
+    </div>
+  </div>
+
+  <style>
+    @keyframes fadeIn {
+      from {opacity:0; transform: translateY(10px);} 
+      to {opacity:1; transform: translateY(0);} 
+    }
+
+    @keyframes scaleIn {
+      from {transform: scale(0.9); opacity:0;} 
+      to {transform: scale(1); opacity:1;} 
+    }
+
+    .card {
+      animation: fadeIn 0.4s ease;
+    }
+
+    .animate-scale {
+      animation: scaleIn 0.25s ease;
+    }
+  </style>
+
+  <script>
+    const profissoes = [
+// BASE (mantidas)
+{nome:"Desenvolvedor Front-end", area:"Tecnologia", salario:"R$ 4.000 - R$ 10.000", desc:"Cria interfaces de sites.", detalhes:"Trabalha com HTML, CSS e JavaScript.", formacao:"TI.", habilidades:"Criatividade.", rotina:"Criar telas."},
+{nome:"Desenvolvedor Back-end", area:"Tecnologia", salario:"R$ 5.000 - R$ 12.000", desc:"Cria sistemas.", detalhes:"Lógica e banco de dados.", formacao:"TI.", habilidades:"Programação.", rotina:"Criar APIs."},
+{nome:"Cientista de Dados", area:"Tecnologia", salario:"R$ 7.000 - R$ 18.000", desc:"Analisa dados.", detalhes:"Gera insights.", formacao:"Dados.", habilidades:"Python.", rotina:"Analisar."},
+
+{nome:"Médico", area:"Saúde", salario:"R$ 8.000 - R$ 25.000", desc:"Cuida da saúde.", detalhes:"Diagnostica doenças.", formacao:"Medicina.", habilidades:"Empatia.", rotina:"Atender."},
+{nome:"Enfermeiro", area:"Saúde", salario:"R$ 2.500 - R$ 7.000", desc:"Auxilia pacientes.", detalhes:"Cuidados.", formacao:"Enfermagem.", habilidades:"Atenção.", rotina:"Cuidar."},
+
+{nome:"Administrador", area:"Negócios", salario:"R$ 3.000 - R$ 10.000", desc:"Gerencia empresas.", detalhes:"Organiza processos.", formacao:"Administração.", habilidades:"Liderança.", rotina:"Planejar."},
+
+{nome:"Professor", area:"Educação", salario:"R$ 2.000 - R$ 8.000", desc:"Ensina.", detalhes:"Aulas.", formacao:"Licenciatura.", habilidades:"Comunicação.", rotina:"Dar aula."},
+
+{nome:"Designer Gráfico", area:"Criativo", salario:"R$ 2.500 - R$ 8.000", desc:"Cria artes.", detalhes:"Visual.", formacao:"Design.", habilidades:"Criatividade.", rotina:"Criar."},
+
+// +100 PROFISSÕES REAIS (ADICIONADAS SEM QUEBRAR)
+...[
+"Analista de Sistemas","Analista de Redes","Analista de Segurança","DevOps","QA Tester","Suporte Técnico","Administrador de Banco de Dados","Engenheiro de Dados","Especialista em IA","Programador Mobile",
+"Dentista","Psicólogo","Fisioterapeuta","Nutricionista","Farmacêutico","Biomédico","Veterinário","Radiologista","Terapeuta Ocupacional","Fonoaudiólogo",
+"Contador","Economista","Analista Financeiro","Gestor de RH","Recrutador","Consultor Empresarial","Auditor","Corretor de Imóveis","Vendedor","Gerente Comercial",
+"Pedagogo","Coordenador Pedagógico","Diretor Escolar","Tutor","Instrutor de Cursos","Educador Infantil","Professor de Inglês","Professor de Matemática","Professor de História","Professor de Ciências",
+"Fotógrafo","Editor de Vídeo","Ilustrador","Animador","Diretor de Arte","Publicitário","Social Media","Redator","Roteirista","Influenciador Digital",
+"Engenheiro Civil","Engenheiro Mecânico","Engenheiro Elétrico","Engenheiro de Produção","Arquiteto","Urbanista","Técnico em Edificações","Topógrafo","Mestre de Obras","Desenhista Técnico",
+"Advogado","Promotor","Juiz","Delegado","Escrivão","Policial","Bombeiro","Agente Penitenciário","Perito Criminal","Defensor Público",
+"Motorista","Motorista de Aplicativo","Piloto","Comissário de Bordo","Logístico","Despachante","Operador de Máquinas","Operador de Empilhadeira","Carteiro","Entregador",
+"Cozinheiro","Chef","Garçom","Barista","Bartender","Padeiro","Confeiteiro","Açougueiro","Atendente","Caixa",
+"Eletricista","Mecânico","Encanador","Soldador","Marceneiro","Pintor","Técnico em Manutenção","Instalador","Serralheiro","Vidraceiro"
+].map((nome, i) => ({
+  nome,
+  area: ["Tecnologia","Saúde","Negócios","Educação","Criativo","Engenharia","Jurídico","Serviços"][i % 8],
+  salario: "R$ 2.000 - R$ 10.000",
+  desc: "Profissão do mercado.",
+  detalhes: "Atua em atividades específicas da área profissional.",
+  formacao: [
+    "Curso técnico ou graduação na área",
+    "Graduação específica + especialização",
+    "Cursos profissionalizantes",
+    "Ensino médio + qualificação",
+    "Graduação completa"
+  ][i % 5],
+  habilidades: "Responsabilidade, organização e conhecimento técnico.",
+  rotina: [
+    "Executar tarefas técnicas da área",
+    "Atender clientes ou usuários",
+    "Planejar e organizar atividades",
+    "Analisar informações e tomar decisões",
+    "Trabalhar em equipe e resolver problemas"
+  ][i % 5]
+}))
+];
+
+    const cardsContainer = document.getElementById("cards");
+
+    function renderCards(lista) {
+      cardsContainer.innerHTML = "";
+
+      if(lista.length === 0){
+        cardsContainer.innerHTML = `<p class="text-center col-span-full text-gray-400">Nenhuma profissão encontrada.</p>`;
+        return;
+      }
+
+      lista.forEach(p => {
+        const card = document.createElement("div");
+        card.className = "card bg-gray-800 p-5 rounded-2xl shadow-lg hover:shadow-blue-500/20 hover:scale-105 transition cursor-pointer";
+
+        card.innerHTML = `
+          <h3 class="text-xl font-bold mb-2">${p.nome}</h3>
+          <p class="text-sm text-gray-400">Área: ${p.area}</p>
+          <p class="text-sm text-green-400 font-semibold">${p.salario}</p>
+        `;
+
+        card.addEventListener("click", () => openModal(p));
+
+        cardsContainer.appendChild(card);
+      });
+    }
+
+    function openModal(p) {
+      document.getElementById("modalTitle").innerText = p.nome;
+      document.getElementById("modalDesc").innerText = p.desc;
+      document.getElementById("modalSalary").innerText = p.salario;
+
+      // adiciona explicação detalhada
+      let detalhe = document.getElementById("modalDetalhe");
+      if(!detalhe){
+        detalhe = document.createElement("p");
+        detalhe.id = "modalDetalhe";
+        detalhe.className = "text-gray-400 mt-3";
+        document.getElementById("modalSalary").after(detalhe);
+      }
+
+      detalhe.innerText = `${p.detalhes}
+
+🎓 Formação: ${p.formacao}
+🧠 Habilidades: ${p.habilidades}
+📅 Rotina: ${p.rotina}`;
+
+      const modal = document.getElementById("modal");
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("modal");
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+    }
+
+    function filtrar() {
+      const busca = document.getElementById("search").value.toLowerCase().trim();
+      const area = document.getElementById("areaFilter").value;
+
+      const resultado = profissoes.filter(p => {
+        const nomeMatch = p.nome.toLowerCase().includes(busca);
+        const areaMatch = area === "" || p.area === area;
+        return nomeMatch && areaMatch;
+      });
+
+      renderCards(resultado);
+    }
+
+    document.getElementById("search").addEventListener("input", filtrar);
+    document.getElementById("areaFilter").addEventListener("change", filtrar);
+
+    renderCards(profissoes);
+  </script>
+
+</body>
+</html>
