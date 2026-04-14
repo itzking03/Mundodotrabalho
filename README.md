@@ -1,2 +1,2 @@
 # Mundodotrabalho
-mundo-do-trabalho.netlify.app
+https://mundo-do-trabalho.netlify.app
