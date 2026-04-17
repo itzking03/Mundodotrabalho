@@ -1,2 +1,2 @@
 # Mundo-do-trabalho!
-Pages:Site!
+https://itzking03.github.io/Mundodotrabalho/
